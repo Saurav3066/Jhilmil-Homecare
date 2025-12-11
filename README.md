@@ -129,6 +129,8 @@ Your app will now be live at:
 You can add UI screenshots here:
 
     jhilmil/src/assets/Screenshot.png
+<img width="1920" height="904" alt="Screenshot 2025-12-12 014330" src="https://github.com/user-attachments/assets/93a6fc6e-0427-4af1-b6fc-4bda1a01eeb3" />
+    
 
 ------------------------------------------------------------------------
 
