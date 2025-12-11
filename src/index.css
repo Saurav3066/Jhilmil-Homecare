@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+
+html, body, #root { height: 100%; }
+body { @apply bg-gray-50 text-gray-800; }
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn .2s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn .25s ease-out;
+}
+
+
+/* filter bar */
+
+/* Make the dropdown list always come on top */
+select {
+  position: relative;
+  z-index: 9999;
+}
+
+/* Style the native select box */
+.stylish-select {
+  position: relative;
+  backdrop-filter: blur(6px);
+  font-weight: 500;
+  border-radius: 12px;
+  border: 1px solid rgba(180, 180, 180, 0.5);
+
+  /* custom arrow */
+  /* background-image: url("data:image/svg+xml;utf8,<svg fill='none' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M19 9l-7 7-7-7'/></svg>"); */
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+
+/* Hover / focus styles */
+.stylish-select:hover {
+  background-color: rgba(255, 255, 255, 1);
+  border-color: #6e9bff;
+}
+
+.stylish-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Styling options (limited support across browsers) */
+.stylish-select option {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* For browsers that support styling the dropdown menu */
+select::-ms-expand {
+  display: none;
+}
