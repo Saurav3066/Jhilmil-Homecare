@@ -1,16 +1,15 @@
 {
-  "homepage": "https://Saurav3066/Jhilmil-Homecare",
+  "homepage": "https://Saurav3066.github.io/Jhilmil-Homecare",
   "name": "jhilmil",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "pre-deploy":"npm run build",
-    "deploy":"gh-pages -d build",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
