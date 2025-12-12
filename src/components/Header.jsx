@@ -31,7 +31,9 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-6 text-blue-800 font-medium">
           <a href="/" className="hover:text-blue-600 transition">Home</a>
           <a href="/services" className="hover:text-blue-600 transition">Services</a>
+          <a href="/my-bookings" className="block hover:text-blue-600">My Bookings</a>
           <a href="/booking"className="hidden md:block bg-blue-700 text-white px-5 py-2 rounded-lg shadow hover:bg-blue-800 transition">Book Service</a>
+          
         </nav>
 
         {/* CTA Button (Desktop) */}
@@ -51,8 +53,7 @@ const Header = () => {
         <div className="md:hidden bg-white shadow-inner px-6 py-4 space-y-4 text-blue-800 font-medium animate-slideDown">
           <a href="/" className="block hover:text-blue-600">Home</a>
           <a href="/services" className="block hover:text-blue-600">Services</a>
-          <a href="/about" className="block hover:text-blue-600">About</a>
-          <a href="/contact" className="block hover:text-blue-600">Contact</a>
+          <a href="/my-bookings" className="block hover:text-blue-600">My Bookings</a>
           <button
             href="/booking"
             // className="block bg-blue-700 text-white text-center px-4 py-2 rounded-lg shadow hover:bg-blue-800"

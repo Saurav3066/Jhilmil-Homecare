@@ -49,6 +49,29 @@ export default function Dashboard() {
         </Card>
       </div>
 
+      {/* ======================= SUMMARY CARDS ======================= */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card title="Patients Summary" subtitle="Recent Patients">
+          <ul className="text-sm text-blue-800 space-y-1">
+            {patients.slice(0, 4).map(p => (
+              <li key={p.id}>
+                <span className="font-semibold">{p.name}</span> — {p.careType} — {p.status}
+              </li>
+            ))}
+          </ul>
+        </Card>
+
+        <Card title="Services Summary" subtitle="Top Services">
+          <ul className="text-sm text-blue-800 space-y-1">
+            {services.slice(0, 4).map(s => (
+              <li key={s.id}>
+                <span className="font-semibold">{s.name}</span> — {s.freq}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      </div>
+
       {/* ======================= MINI CHARTS (FAKE PLACEHOLDERS) ======================= */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Card title="Weekly Patient Visits" subtitle="7-day trend">
@@ -76,29 +99,6 @@ export default function Dashboard() {
             <li>• 8 new patient appointments</li>
             <li>• 3 follow-up visits</li>
             <li>• 12 service requests</li>
-          </ul>
-        </Card>
-      </div>
-
-      {/* ======================= SUMMARY CARDS ======================= */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card title="Patients Summary" subtitle="Recent Patients">
-          <ul className="text-sm text-blue-800 space-y-1">
-            {patients.slice(0, 4).map(p => (
-              <li key={p.id}>
-                <span className="font-semibold">{p.name}</span> — {p.careType} — {p.status}
-              </li>
-            ))}
-          </ul>
-        </Card>
-
-        <Card title="Services Summary" subtitle="Top Services">
-          <ul className="text-sm text-blue-800 space-y-1">
-            {services.slice(0, 4).map(s => (
-              <li key={s.id}>
-                <span className="font-semibold">{s.name}</span> — {s.freq}
-              </li>
-            ))}
           </ul>
         </Card>
       </div>
